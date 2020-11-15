@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Cucumber</title>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<style>
+
+.cucumber-react h1, .cucumber-react h2, .cucumber-react h3 {
+  padding: 0;
+  margin-top: 0.3em;
+  margin-bottom: 0;
+  display: inline-block;
+}
+.cucumber-react a {
+  color: inherit;
+}
+.cucumber-react ol {
+  list-style-type: none;
+  padding-left: 0;
+}
+.cucumber-react section {
+  margin-bottom: 1em;
+}
+.cucumber-react .status-passed {
+  color: #2CB14A;
+}
+.cucumber-react .status-skipped {
+  color: #00A0CC;
+}
+.cucumber-react .status-pending {
+  color: #FFAD33;
+}
+.cucumber-react .status-undefined {
+  color: #FFAD33;
+}
+.cucumber-react .status-ambiguous {
+  color: #F4EBFD;
+}
+.cucumber-react .status-failed {
+  color: #BB0000;
+}
+.cucumber-react .status-unknown {
+  color: #B6BECB;
+}
+.cucumber-react .data-table {
+  border-collapse: collapse;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.cucumber-react .data-table th {
+  border: 1px solid #4B5662;
+  padding: 0.3em;
+}
+.cucumber-react .data-table td {
+  border: 1px solid #4B5662;
+  padding: 0.3em;
+}
+.cucumber-react .data-table td__status {
+  padding: 0.5em 3px 3px 3px;
+}
+.cucumber-react .data-table td__step {
+  flex-grow: 1;
+}
+.cucumber-react .examples-table {
+  border-collapse: collapse;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.cucumber-react .examples-table th {
+  padding: 0.3em;
+}
+.cucumber-react .examples-table th + th {
+  border: 1px solid #4B5662;
+}
+.cucumber-react .examples-table td {
+  padding: 0.3em;
+}
+.cucumber-react .examples-table td + td {
+  border: 1px solid #4B5662;
+}
+.cucumber-react .examples-table td + td__status {
+  padding: 0.5em 3px 3px 3px;
+}
+.cucumber-react .examples-table td + td__step {
+  flex-grow: 1;
+}
+.cucumber-react .gherkin-document-list {
+  font: 14px "Open Sans", sans-serif;
+  color: #161C24;
+  background: #fff;
+  overflow-x: hidden;
+}
+.cucumber-react .indent {
+  margin-left: 1em;
+}
+.cucumber-react .keyword {
+  font-weight: bold;
+}
+.cucumber-react .step {
+  padding: 0.1em;
+}
+.cucumber-react .step-text {
+  font-weight: normal;
+}
+.cucumber-react .step-param {
+  font-weight: normal;
+}
+.cucumber-react .step-container {
+  display: flex;
+}
+.cucumber-react .step-container__step {
+  flex-grow: 1;
+}
+.cucumber-react .text_status_icon_container {
+  padding-top: 0.35em;
+  padding-right: 0.5em;
+}
+.cucumber-react .error-message {
+  padding: 0.5em;
+  margin: 0;
+  overflow: scroll;
+}
+.cucumber-react .tag-list {
+  padding: 0;
+  margin-bottom: 0;
+}
+.cucumber-react .tag {
+  display: inline;
+  list-style-type: none;
+  padding: 4px 8px 4px 8px;
+  margin-right: 6px;
+  background-color: #FFFFFF;
+  border-radius: 6px;
+}
+.accordion {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+}
+
+.accordion__item + .accordion__item {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.accordion__button {
+    background-color: #f4f4f4;
+    color: #444;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+}
+
+.accordion__button:hover {
+    background-color: #ddd;
+}
+
+.accordion__button:before {
+    display: inline-block;
+    content: '';
+    height: 10px;
+    width: 10px;
+    margin-right: 12px;
+    border-bottom: 2px solid currentColor;
+    border-right: 2px solid currentColor;
+    transform: rotate(-45deg);
+}
+
+.accordion__button[aria-expanded='true']::before,
+.accordion__button[aria-selected='true']::before {
+    transform: rotate(45deg);
+}
+
+.accordion__panel {
+    padding: 20px;
+    animation: fadein 0.35s ease-in;
+}
+
+
+	</style>
+</head>
+<body>
+<div id="content">
+</div>
+<script>
+window.CUCUMBER_MESSAGES = [
+{"meta":{"protocolVersion":"12.1.1","implementation":{"name":"cucumber-ruby","version":"4.0.0"},"runtime":{"name":"ruby","version":"2.6.6"},"os":{"name":"mingw32","version":"10.0.17763"},"cpu":{"name":"x64"}}},
+{"hook":{"id":"6192dc8d-e7cd-4451-aab9-4fa946fa4212","sourceReference":{"uri":"capybara-3.32.2/lib/capybara/cucumber.rb","location":{"line":10}}}},
+{"hook":{"id":"7ed3e775-06d0-4a9e-a3ca-15cd8526aee1","sourceReference":{"uri":"capybara-3.32.2/lib/capybara/cucumber.rb","location":{"line":14}}}},
+{"hook":{"id":"2f171455-3bd7-43b2-8c0c-161b778a20d8","tagExpression":"@javascript","sourceReference":{"uri":"capybara-3.32.2/lib/capybara/cucumber.rb","location":{"line":18}}}},
+{"hook":{"id":"133a412b-29ba-4213-9680-e4661495488b","sourceReference":{"uri":"capybara-3.32.2/lib/capybara/cucumber.rb","location":{"line":22}}}},
+{"hook":{"id":"98b62a64-6d5d-47eb-9710-26e90aeadc62","tagExpression":"@logout","sourceReference":{"uri":"features/support/hooks.rb","location":{"line":1}}}},
+{"hook":{"id":"11988323-1285-487d-a9d4-2e6e185caca3","sourceReference":{"uri":"features/support/hooks.rb","location":{"line":6}}}},
+{"stepDefinition":{"id":"b3917753-ce84-48fa-a04f-473d9ac7750c","pattern":{"source":"que eu acesso a pagina principal","type":"CUCUMBER_EXPRESSION"},"sourceReference":{"uri":"features/step_definitions/login_steps.rb","location":{"line":1}}}},
+{"stepDefinition":{"id":"e7919dc7-e42c-427c-87a9-aed8dd66246e","pattern":{"source":"eu faço login com {string} e {string}","type":"CUCUMBER_EXPRESSION"},"sourceReference":{"uri":"features/step_definitions/login_steps.rb","location":{"line":5}}}},
+{"stepDefinition":{"id":"a2711b43-e606-446a-bc73-4802da1229a8","pattern":{"source":"devo ser autenticado com sucesso","type":"CUCUMBER_EXPRESSION"},"sourceReference":{"uri":"features/step_definitions/login_steps.rb","location":{"line":10}}}},
+{"stepDefinition":{"id":"cc78d899-7b54-4aba-9b0f-9bfe19b2dc46","pattern":{"source":"devo ver a seguinte mensagem {string}","type":"CUCUMBER_EXPRESSION"},"sourceReference":{"uri":"features/step_definitions/login_steps.rb","location":{"line":14}}}},
+{"source":{"uri":"features/login.feature","data":"#language:pt\n\nFuncionalidade: Login\n\n    Para que eu possa cadastrar e gerenciar minhas tarefas\n    Sendo um usuario\n    Posso acessar o sistema com meu email e senha previamente cadastrados.\n\n    Contexto: Pagina principal \n        Dado que eu acesso a pagina principal\n     \n@logout\n    Cenário: Usuário deve ser autorizado\n        Quando eu faço login com \"rodolfopereira09@gmail.com\" e \"Martinelli05112015\"\n        Então devo ser autenticado com sucesso\n        E devo ver a seguinte mensagem \"Olá, Rodolfo Pereira\"\n    \n    Esquema do Cenário: Tentativa do Login\n\n        Quando eu faço login com \"\u003cemail\u003e\" e \"\u003csenha\u003e\"\n        Então devo ver a seguinte mensagem \"\u003calerta\u003e\"\n\n        Exemplos:\n        | email                      | senha  | alerta                     |\n        | rodolfopereira09@gmail.com | mickey | Senha inválida             |\n        | rodolfopereira@gmail.com   | mickey | Usuário não cadastrado     |\n        | rodolfopereira09@.com      | mickey | Email incorreto ou ausente |\n","mediaType":"text/x.cucumber.gherkin+plain"}},
+{"gherkinDocument":{"feature":{"location":{"line":3,"column":1},"language":"pt","keyword":"Funcionalidade","name":"Login","description":"    Para que eu possa cadastrar e gerenciar minhas tarefas\n    Sendo um usuario\n    Posso acessar o sistema com meu email e senha previamente cadastrados.","children":[{"background":{"id":"57cbfcfc-62b9-43a4-a2e3-2fec9468d3b7","location":{"line":9,"column":5},"keyword":"Contexto","name":"Pagina principal","steps":[{"location":{"line":10,"column":9},"keyword":"Dado ","text":"que eu acesso a pagina principal","id":"4cfd49f0-44d1-4629-aa07-832749076c7f"}]}},{"scenario":{"id":"33aaf3ef-2a2f-438f-b322-d0732a2d2e4e","tags":[{"location":{"line":12,"column":1},"name":"@logout","id":"ccfdefbd-2eec-4c0e-b60b-fdaa110ee052"}],"location":{"line":13,"column":5},"keyword":"Cenário","name":"Usuário deve ser autorizado","steps":[{"location":{"line":14,"column":9},"keyword":"Quando ","text":"eu faço login com \"rodolfopereira09@gmail.com\" e \"Martinelli05112015\"","id":"e3a2e96a-3bbb-48d9-a329-0eabbc10fb21"},{"location":{"line":15,"column":9},"keyword":"Então ","text":"devo ser autenticado com sucesso","id":"6542a7d8-8533-4822-850a-2d0a4d26797f"},{"location":{"line":16,"column":9},"keyword":"E ","text":"devo ver a seguinte mensagem \"Olá, Rodolfo Pereira\"","id":"be61084d-98d7-4c38-9451-838e7e5c9734"}]}},{"scenario":{"id":"bab98832-de9f-4129-a0b6-03c5dddf1daa","location":{"line":18,"column":5},"keyword":"Esquema do Cenário","name":"Tentativa do Login","steps":[{"location":{"line":20,"column":9},"keyword":"Quando ","text":"eu faço login com \"\u003cemail\u003e\" e \"\u003csenha\u003e\"","id":"132427d9-714a-4598-a0cf-b6d736b7a420"},{"location":{"line":21,"column":9},"keyword":"Então ","text":"devo ver a seguinte mensagem \"\u003calerta\u003e\"","id":"09350f48-f3be-4698-b29d-9da3b096458e"}],"examples":[{"id":"f656c514-bdad-441a-b40c-70cf255ad82f","location":{"line":23,"column":9},"keyword":"Exemplos","tableHeader":{"id":"157380b7-b966-44c6-8d67-201e270fb6b6","location":{"line":24,"column":9},"cells":[{"location":{"line":24,"column":11},"value":"email"},{"location":{"line":24,"column":40},"value":"senha"},{"location":{"line":24,"column":49},"value":"alerta"}]},"tableBody":[{"id":"974ad5e6-9b72-467e-8868-695667f6ea5f","location":{"line":25,"column":9},"cells":[{"location":{"line":25,"column":11},"value":"rodolfopereira09@gmail.com"},{"location":{"line":25,"column":40},"value":"mickey"},{"location":{"line":25,"column":49},"value":"Senha inválida"}]},{"id":"67ffe888-6806-492c-b1ea-f08aecbe0a7d","location":{"line":26,"column":9},"cells":[{"location":{"line":26,"column":11},"value":"rodolfopereira@gmail.com"},{"location":{"line":26,"column":40},"value":"mickey"},{"location":{"line":26,"column":49},"value":"Usuário não cadastrado"}]},{"id":"3856136f-6cb6-4392-a6bb-5c7483596523","location":{"line":27,"column":9},"cells":[{"location":{"line":27,"column":11},"value":"rodolfopereira09@.com"},{"location":{"line":27,"column":40},"value":"mickey"},{"location":{"line":27,"column":49},"value":"Email incorreto ou ausente"}]}]}]}}]},"uri":"features/login.feature"}},
+{"pickle":{"uri":"features/login.feature","id":"c5edc958-ee62-4621-88fc-898f9bc34b89","tags":[{"name":"@logout","astNodeId":"ccfdefbd-2eec-4c0e-b60b-fdaa110ee052"}],"name":"Usuário deve ser autorizado","language":"pt","astNodeIds":["33aaf3ef-2a2f-438f-b322-d0732a2d2e4e"],"steps":[{"id":"763035d9-2733-4bd2-b2d4-e0f9dedc4b0e","astNodeIds":["4cfd49f0-44d1-4629-aa07-832749076c7f"],"text":"que eu acesso a pagina principal"},{"id":"06e1fa0d-122d-4f03-aa87-7ab67fb430c7","astNodeIds":["e3a2e96a-3bbb-48d9-a329-0eabbc10fb21"],"text":"eu faço login com \"rodolfopereira09@gmail.com\" e \"Martinelli05112015\""},{"id":"12eb95f8-df8a-4824-b6f4-f9ec69b7e9c4","astNodeIds":["6542a7d8-8533-4822-850a-2d0a4d26797f"],"text":"devo ser autenticado com sucesso"},{"id":"e3d8be77-a1eb-4cbf-8486-260eea6364a5","astNodeIds":["be61084d-98d7-4c38-9451-838e7e5c9734"],"text":"devo ver a seguinte mensagem \"Olá, Rodolfo Pereira\""}]}},
+{"pickle":{"uri":"features/login.feature","id":"eebfaec0-c712-44fa-af4d-894c6c286fcf","name":"Tentativa do Login","language":"pt","steps":[{"id":"4723b80d-b2bb-4488-a91d-5b1cc26020ce","astNodeIds":["4cfd49f0-44d1-4629-aa07-832749076c7f"],"text":"que eu acesso a pagina principal"},{"id":"dcaea0f3-e79d-4b00-ba6a-bf7936ea4ff4","astNodeIds":["132427d9-714a-4598-a0cf-b6d736b7a420","974ad5e6-9b72-467e-8868-695667f6ea5f"],"text":"eu faço login com \"rodolfopereira09@gmail.com\" e \"mickey\""},{"id":"9d487ff7-6c93-405f-881a-bb411bf881c7","astNodeIds":["09350f48-f3be-4698-b29d-9da3b096458e","974ad5e6-9b72-467e-8868-695667f6ea5f"],"text":"devo ver a seguinte mensagem \"Senha inválida\""}],"astNodeIds":["bab98832-de9f-4129-a0b6-03c5dddf1daa","974ad5e6-9b72-467e-8868-695667f6ea5f"]}},
+{"pickle":{"uri":"features/login.feature","id":"815d80e0-ee58-4053-a05a-0f902f1aac0d","name":"Tentativa do Login","language":"pt","steps":[{"id":"d2c6162e-4108-4f0f-86e9-b4328e57ad08","astNodeIds":["4cfd49f0-44d1-4629-aa07-832749076c7f"],"text":"que eu acesso a pagina principal"},{"id":"024f7b0d-4b64-4f2d-8b47-df505b58a239","astNodeIds":["132427d9-714a-4598-a0cf-b6d736b7a420","67ffe888-6806-492c-b1ea-f08aecbe0a7d"],"text":"eu faço login com \"rodolfopereira@gmail.com\" e \"mickey\""},{"id":"f3c88362-0ae1-40c0-94c5-f3d6207812e5","astNodeIds":["09350f48-f3be-4698-b29d-9da3b096458e","67ffe888-6806-492c-b1ea-f08aecbe0a7d"],"text":"devo ver a seguinte mensagem \"Usuário não cadastrado\""}],"astNodeIds":["bab98832-de9f-4129-a0b6-03c5dddf1daa","67ffe888-6806-492c-b1ea-f08aecbe0a7d"]}},
+{"pickle":{"uri":"features/login.feature","id":"3404a15c-c199-4b9e-be27-0cf5f75a4329","name":"Tentativa do Login","language":"pt","steps":[{"id":"721f3254-e7e4-4189-b370-18c099cd07ee","astNodeIds":["4cfd49f0-44d1-4629-aa07-832749076c7f"],"text":"que eu acesso a pagina principal"},{"id":"5d49bcb4-18e8-4861-b04a-7eb043fc68af","astNodeIds":["132427d9-714a-4598-a0cf-b6d736b7a420","3856136f-6cb6-4392-a6bb-5c7483596523"],"text":"eu faço login com \"rodolfopereira09@.com\" e \"mickey\""},{"id":"5550a161-eb4e-4db3-9811-f31c559a715a","astNodeIds":["09350f48-f3be-4698-b29d-9da3b096458e","3856136f-6cb6-4392-a6bb-5c7483596523"],"text":"devo ver a seguinte mensagem \"Email incorreto ou ausente\""}],"astNodeIds":["bab98832-de9f-4129-a0b6-03c5dddf1daa","3856136f-6cb6-4392-a6bb-5c7483596523"]}},
+{"testCase":{"id":"5694e8da-1a11-4cea-b5b6-8b0cf82717fe","pickleId":"c5edc958-ee62-4621-88fc-898f9bc34b89","testSteps":[{"id":"39f0e6b4-f494-4d37-994b-9da5a2356851","hookId":"7ed3e775-06d0-4a9e-a3ca-15cd8526aee1"},{"id":"94f382da-47e4-4936-9734-f72629635395","hookId":"133a412b-29ba-4213-9680-e4661495488b"},{"id":"c4c848da-ea61-4877-bcad-7b10451936d0","pickleStepId":"763035d9-2733-4bd2-b2d4-e0f9dedc4b0e","stepDefinitionIds":["b3917753-ce84-48fa-a04f-473d9ac7750c"],"stepMatchArgumentsLists":[{}]},{"id":"2f54c55c-f574-4293-8afa-b8bc37789afe","pickleStepId":"06e1fa0d-122d-4f03-aa87-7ab67fb430c7","stepDefinitionIds":["e7919dc7-e42c-427c-87a9-aed8dd66246e"],"stepMatchArgumentsLists":[{"stepMatchArguments":[{"group":{"start":18,"value":"\"rodolfopereira09@gmail.com\"","children":[{"start":19,"value":"rodolfopereira09@gmail.com","children":[{}]},{"children":[{}]}]},"parameterTypeName":"string"},{"group":{"start":49,"value":"\"Martinelli05112015\"","children":[{"start":50,"value":"Martinelli05112015","children":[{}]},{"children":[{}]}]},"parameterTypeName":"string"}]}]},{"id":"e6659e81-fe1b-46dd-9042-53d9b2711546","pickleStepId":"12eb95f8-df8a-4824-b6f4-f9ec69b7e9c4","stepDefinitionIds":["a2711b43-e606-446a-bc73-4802da1229a8"],"stepMatchArgumentsLists":[{}]},{"id":"5ef44bd0-5c9f-493e-ab3b-9cf5193852a1","pickleStepId":"e3d8be77-a1eb-4cbf-8486-260eea6364a5","stepDefinitionIds":["cc78d899-7b54-4aba-9b0f-9bfe19b2dc46"],"stepMatchArgumentsLists":[{"stepMatchArguments":[{"group":{"start":29,"value":"\"Olá, Rodolfo Pereira\"","children":[{"start":30,"value":"Olá, Rodolfo Pereira","children":[{}]},{"children":[{}]}]},"parameterTypeName":"string"}]}]},{"id":"3b53b9f6-a296-49dd-9b7b-8b263f16b525","hookId":"11988323-1285-487d-a9d4-2e6e185caca3"},{"id":"c2b5c60d-beb8-4e6c-b7fa-8cdbc6a8bee9","hookId":"98b62a64-6d5d-47eb-9710-26e90aeadc62"},{"id":"29ebfdb2-e02f-4e21-9a4f-75ea58995e9f","hookId":"6192dc8d-e7cd-4451-aab9-4fa946fa4212"}]}},
+{"testCase":{"id":"2c09ca77-fb94-48b3-bcab-d40200fcefa9","pickleId":"eebfaec0-c712-44fa-af4d-894c6c286fcf","testSteps":[{"id":"d22e0171-fe03-419b-aee9-f47c75d5f34e","hookId":"7ed3e775-06d0-4a9e-a3ca-15cd8526aee1"},{"id":"1708a789-978f-43c1-92b1-f6e905e4d478","hookId":"133a412b-29ba-4213-9680-e4661495488b"},{"id":"c0a06e83-e94c-4dc5-91f3-5f82ccddc78f","pickleStepId":"4723b80d-b2bb-4488-a91d-5b1cc26020ce","stepDefinitionIds":["b3917753-ce84-48fa-a04f-473d9ac7750c"],"stepMatchArgumentsLists":[{}]},{"id":"d899701b-d9df-417d-b76a-4cbd16b39705","pickleStepId":"dcaea0f3-e79d-4b00-ba6a-bf7936ea4ff4","stepDefinitionIds":["e7919dc7-e42c-427c-87a9-aed8dd66246e"],"stepMatchArgumentsLists":[{"stepMatchArguments":[{"group":{"start":18,"value":"\"rodolfopereira09@gmail.com\"","children":[{"start":19,"value":"rodolfopereira09@gmail.com","children":[{}]},{"children":[{}]}]},"parameterTypeName":"string"},{"group":{"start":49,"value":"\"mickey\"","children":[{"start":50,"value":"mickey","children":[{}]},{"children":[{}]}]},"parameterTypeName":"string"}]}]},{"id":"b733466d-6806-43f4-82ed-7fc68bfe903c","pickleStepId":"9d487ff7-6c93-405f-881a-bb411bf881c7","stepDefinitionIds":["cc78d899-7b54-4aba-9b0f-9bfe19b2dc46"],"stepMatchArgumentsLists":[{"stepMatchArguments":[{"group":{"start":29,"value":"\"Senha inválida\"","children":[{"start":30,"value":"Senha inválida","children":[{}]},{"children":[{}]}]},"parameterTypeName":"string"}]}]},{"id":"24548332-e9dc-4980-a5b2-d475f7817e3b","hookId":"11988323-1285-487d-a9d4-2e6e185caca3"},{"id":"4644754f-5e44-45b0-9703-86a68eb5496c","hookId":"6192dc8d-e7cd-4451-aab9-4fa946fa4212"}]}},
+{"testCase":{"id":"e3d8b193-7dec-4b0f-91fb-b7248e7fa53a","pickleId":"815d80e0-ee58-4053-a05a-0f902f1aac0d","testSteps":[{"id":"514765ca-35ec-4643-a5f2-24d325f8cefd","hookId":"7ed3e775-06d0-4a9e-a3ca-15cd8526aee1"},{"id":"cc727046-f7f6-42ca-a191-3045d7e3284b","hookId":"133a412b-29ba-4213-9680-e4661495488b"},{"id":"77c82984-8713-4d66-9925-d23b2d419be2","pickleStepId":"d2c6162e-4108-4f0f-86e9-b4328e57ad08","stepDefinitionIds":["b3917753-ce84-48fa-a04f-473d9ac7750c"],"stepMatchArgumentsLists":[{}]},{"id":"8fc3bae0-9a5a-4c5c-aebf-a91f042644f3","pickleStepId":"024f7b0d-4b64-4f2d-8b47-df505b58a239","stepDefinitionIds":["e7919dc7-e42c-427c-87a9-aed8dd66246e"],"stepMatchArgumentsLists":[{"stepMatchArguments":[{"group":{"start":18,"value":"\"rodolfopereira@gmail.com\"","children":[{"start":19,"value":"rodolfopereira@gmail.com","children":[{}]},{"children":[{}]}]},"parameterTypeName":"string"},{"group":{"start":47,"value":"\"mickey\"","children":[{"start":48,"value":"mickey","children":[{}]},{"children":[{}]}]},"parameterTypeName":"string"}]}]},{"id":"5ab6dc84-4533-49c5-baab-f93c8ea2c5a5","pickleStepId":"f3c88362-0ae1-40c0-94c5-f3d6207812e5","stepDefinitionIds":["cc78d899-7b54-4aba-9b0f-9bfe19b2dc46"],"stepMatchArgumentsLists":[{"stepMatchArguments":[{"group":{"start":29,"value":"\"Usuário não cadastrado\"","children":[{"start":30,"value":"Usuário não cadastrado","children":[{}]},{"children":[{}]}]},"parameterTypeName":"string"}]}]},{"id":"2fda8e41-cf11-446b-a181-293bcc556cd4","hookId":"11988323-1285-487d-a9d4-2e6e185caca3"},{"id":"48c3e04a-0c46-403d-aea5-8f0c766114f0","hookId":"6192dc8d-e7cd-4451-aab9-4fa946fa4212"}]}},
+{"testCase":{"id":"3967cb85-69b1-4240-88f4-7be56e22742e","pickleId":"3404a15c-c199-4b9e-be27-0cf5f75a4329","testSteps":[{"id":"76991fdc-f7f8-4282-a39a-3d0791f3ae54","hookId":"7ed3e775-06d0-4a9e-a3ca-15cd8526aee1"},{"id":"d395a0b6-5032-46d3-8314-badbae2bade5","hookId":"133a412b-29ba-4213-9680-e4661495488b"},{"id":"19d5b228-123b-4a42-806c-bfebfa1fe060","pickleStepId":"721f3254-e7e4-4189-b370-18c099cd07ee","stepDefinitionIds":["b3917753-ce84-48fa-a04f-473d9ac7750c"],"stepMatchArgumentsLists":[{}]},{"id":"75180779-02f0-4b2a-af90-8c1b0fee1133","pickleStepId":"5d49bcb4-18e8-4861-b04a-7eb043fc68af","stepDefinitionIds":["e7919dc7-e42c-427c-87a9-aed8dd66246e"],"stepMatchArgumentsLists":[{"stepMatchArguments":[{"group":{"start":18,"value":"\"rodolfopereira09@.com\"","children":[{"start":19,"value":"rodolfopereira09@.com","children":[{}]},{"children":[{}]}]},"parameterTypeName":"string"},{"group":{"start":44,"value":"\"mickey\"","children":[{"start":45,"value":"mickey","children":[{}]},{"children":[{}]}]},"parameterTypeName":"string"}]}]},{"id":"8f2cbb9a-9ce7-4fc8-bf1f-d1847bf32b49","pickleStepId":"5550a161-eb4e-4db3-9811-f31c559a715a","stepDefinitionIds":["cc78d899-7b54-4aba-9b0f-9bfe19b2dc46"],"stepMatchArgumentsLists":[{"stepMatchArguments":[{"group":{"start":29,"value":"\"Email incorreto ou ausente\"","children":[{"start":30,"value":"Email incorreto ou ausente","children":[{}]},{"children":[{}]}]},"parameterTypeName":"string"}]}]},{"id":"abc103ea-5619-4619-89e7-887f09220874","hookId":"11988323-1285-487d-a9d4-2e6e185caca3"},{"id":"a5b1dc7d-21c1-45c1-bdc2-c2b5ab8446f8","hookId":"6192dc8d-e7cd-4451-aab9-4fa946fa4212"}]}},
+{"testRunStarted":{"timestamp":{"seconds":"1591113944274709","nanos":1000000}}},
+{"testCaseStarted":{"id":"151c8029-f9b4-41bb-80ef-ac2a45b178c2","testCaseId":"5694e8da-1a11-4cea-b5b6-8b0cf82717fe","timestamp":{"seconds":"3182227888558871","nanos":2000000},"attempt":1}},
+{"testStepStarted":{"testStepId":"39f0e6b4-f494-4d37-994b-9da5a2356851","testCaseStartedId":"151c8029-f9b4-41bb-80ef-ac2a45b178c2","timestamp":{"seconds":"15911139444110977","nanos":10000000}}},
+{"testStepFinished":{"testStepId":"39f0e6b4-f494-4d37-994b-9da5a2356851","testCaseStartedId":"151c8029-f9b4-41bb-80ef-ac2a45b178c2","testStepResult":{"status":"PASSED","duration":{"nanos":25300}},"timestamp":{"seconds":"15911139444114641","nanos":10000000}}},
+{"testStepStarted":{"testStepId":"94f382da-47e4-4936-9734-f72629635395","testCaseStartedId":"151c8029-f9b4-41bb-80ef-ac2a45b178c2","timestamp":{"seconds":"15911139444116821","nanos":10000000}}},
+{"testStepFinished":{"testStepId":"94f382da-47e4-4936-9734-f72629635395","testCaseStartedId":"151c8029-f9b4-41bb-80ef-ac2a45b178c2","testStepResult":{"status":"PASSED","duration":{"nanos":18600}},"timestamp":{"seconds":"1591113944411843","nanos":1000000}}},
+{"testStepStarted":{"testStepId":"c4c848da-ea61-4877-bcad-7b10451936d0","testCaseStartedId":"151c8029-f9b4-41bb-80ef-ac2a45b178c2","timestamp":{"seconds":"63644557776481","nanos":40000}}},
+{"testStepFinished":{"testStepId":"c4c848da-ea61-4877-bcad-7b10451936d0","testCaseStartedId":"151c8029-f9b4-41bb-80ef-ac2a45b178c2","testStepResult":{"status":"PASSED","duration":{"seconds":"25","nanos":132556900}},"timestamp":{"seconds":"3977784923865387","nanos":2500000}}},
+{"testStepStarted":{"testStepId":"2f54c55c-f574-4293-8afa-b8bc37789afe","testCaseStartedId":"151c8029-f9b4-41bb-80ef-ac2a45b178c2","timestamp":{"seconds":"15911139695488127","nanos":10000000}}},
+{"testStepFinished":{"testStepId":"2f54c55c-f574-4293-8afa-b8bc37789afe","testCaseStartedId":"151c8029-f9b4-41bb-80ef-ac2a45b178c2","testStepResult":{"status":"FAILED","duration":{"seconds":"2","nanos":33304100},"message":"Unable to find css \"input[name=email]\" (Capybara::ElementNotFound)\n./features/support/pages.rb:5:in `faz_login'\n./features/step_definitions/login_steps.rb:7:in `\"eu faço login com {string} e {string}\"'\nfeatures/login.feature:14:in `eu faço login com \"rodolfopereira09@gmail.com\" e \"Martinelli05112015\"'"},"timestamp":{"seconds":"15911139715897241","nanos":10000000}}},
+{"testStepStarted":{"testStepId":"e6659e81-fe1b-46dd-9042-53d9b2711546","testCaseStartedId":"151c8029-f9b4-41bb-80ef-ac2a45b178c2","timestamp":{"seconds":"7955569857950139","nanos":5000000}}},
+{"testStepFinished":{"testStepId":"e6659e81-fe1b-46dd-9042-53d9b2711546","testCaseStartedId":"151c8029-f9b4-41bb-80ef-ac2a45b178c2","testStepResult":{"status":"SKIPPED","duration":{}},"timestamp":{"seconds":"1988892464488501","nanos":1250000}}},
+{"testStepStarted":{"testStepId":"5ef44bd0-5c9f-493e-ab3b-9cf5193852a1","testCaseStartedId":"151c8029-f9b4-41bb-80ef-ac2a45b178c2","timestamp":{"seconds":"15911139715909737","nanos":10000000}}},
+{"testStepFinished":{"testStepId":"5ef44bd0-5c9f-493e-ab3b-9cf5193852a1","testCaseStartedId":"151c8029-f9b4-41bb-80ef-ac2a45b178c2","testStepResult":{"status":"SKIPPED","duration":{}},"timestamp":{"seconds":"3977784928979919","nanos":2500000}}},
+{"testStepStarted":{"testStepId":"3b53b9f6-a296-49dd-9b7b-8b263f16b525","testCaseStartedId":"151c8029-f9b4-41bb-80ef-ac2a45b178c2","timestamp":{"seconds":"248611558061273","nanos":156250}}},
+{"attachment":{"testStepId":"3b53b9f6-a296-49dd-9b7b-8b263f16b525","testCaseStartedId":"151c8029-f9b4-41bb-80ef-ac2a45b178c2","mediaType":"image/png","contentEncoding":"BASE64","body":"bG9nL3NjcmVlbnNob3RzL3VzdcOhcmlvX2RldmVfc2VyX2F1dG9yaXphZG8ucG5n"}},
+{"testStepFinished":{"testStepId":"3b53b9f6-a296-49dd-9b7b-8b263f16b525","testCaseStartedId":"151c8029-f9b4-41bb-80ef-ac2a45b178c2","testStepResult":{"status":"PASSED","duration":{"nanos":276494100}},"timestamp":{"seconds":"3977784929672067","nanos":2500000}}},
+{"testStepStarted":{"testStepId":"c2b5c60d-beb8-4e6c-b7fa-8cdbc6a8bee9","testCaseStartedId":"151c8029-f9b4-41bb-80ef-ac2a45b178c2","timestamp":{"seconds":"15911139718690441","nanos":10000000}}},
+{"testStepFinished":{"testStepId":"c2b5c60d-beb8-4e6c-b7fa-8cdbc6a8bee9","testCaseStartedId":"151c8029-f9b4-41bb-80ef-ac2a45b178c2","testStepResult":{"status":"FAILED","duration":{"seconds":"2","nanos":6036200},"message":"Unable to find link \"rodolfopereira09@gmail.com\" (Capybara::ElementNotFound)\n./features/support/hooks.rb:2:in `After'"},"timestamp":{"seconds":"7955569869390713","nanos":5000000}}},
+{"testStepStarted":{"testStepId":"29ebfdb2-e02f-4e21-9a4f-75ea58995e9f","testCaseStartedId":"151c8029-f9b4-41bb-80ef-ac2a45b178c2","timestamp":{"seconds":"1988892467348077","nanos":1250000}}},
+{"testStepFinished":{"testStepId":"29ebfdb2-e02f-4e21-9a4f-75ea58995e9f","testCaseStartedId":"151c8029-f9b4-41bb-80ef-ac2a45b178c2","testStepResult":{"status":"PASSED","duration":{"nanos":249924200}},"timestamp":{"seconds":"3182227948257289","nanos":2000000}}},
+{"testCaseFinished":{"testCaseStartedId":"151c8029-f9b4-41bb-80ef-ac2a45b178c2","timestamp":{"seconds":"7955569870647891","nanos":5000000}}},
+{"testCaseStarted":{"id":"82b4dde6-ddbf-4f35-8290-a4f9fd6990ac","testCaseId":"2c09ca77-fb94-48b3-bcab-d40200fcefa9","timestamp":{"seconds":"15911139741367567","nanos":10000000},"attempt":1}},
+{"testStepStarted":{"testStepId":"d22e0171-fe03-419b-aee9-f47c75d5f34e","testCaseStartedId":"82b4dde6-ddbf-4f35-8290-a4f9fd6990ac","timestamp":{"seconds":"15911139741444821","nanos":10000000}}},
+{"testStepFinished":{"testStepId":"d22e0171-fe03-419b-aee9-f47c75d5f34e","testCaseStartedId":"82b4dde6-ddbf-4f35-8290-a4f9fd6990ac","testStepResult":{"status":"PASSED","duration":{"nanos":24200}},"timestamp":{"seconds":"159111397414479","nanos":100000}}},
+{"testStepStarted":{"testStepId":"1708a789-978f-43c1-92b1-f6e905e4d478","testCaseStartedId":"82b4dde6-ddbf-4f35-8290-a4f9fd6990ac","timestamp":{"seconds":"1988892467681273","nanos":1250000}}},
+{"testStepFinished":{"testStepId":"1708a789-978f-43c1-92b1-f6e905e4d478","testCaseStartedId":"82b4dde6-ddbf-4f35-8290-a4f9fd6990ac","testStepResult":{"status":"PASSED","duration":{"nanos":12600}},"timestamp":{"seconds":"7955569870725953","nanos":5000000}}},
+{"testStepStarted":{"testStepId":"c0a06e83-e94c-4dc5-91f3-5f82ccddc78f","testCaseStartedId":"82b4dde6-ddbf-4f35-8290-a4f9fd6990ac","timestamp":{"seconds":"15911139741453873","nanos":10000000}}},

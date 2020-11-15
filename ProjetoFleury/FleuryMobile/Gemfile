@@ -1,0 +1,9 @@
+source "http://rubygems.org"
+
+gem 'appium_capybara'
+gem 'appium_lib'
+gem 'cucumber'
+gem 'faker'
+gem 'pry'
+
+

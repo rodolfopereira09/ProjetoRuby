@@ -1,0 +1,18 @@
+# frozen_string_literal: true
+
+source 'http://rubygems.org'
+
+gem 'capybara'
+gem 'cucumber'
+gem 'rspec'
+gem 'faker'
+gem 'mongo'
+gem 'selenium-webdriver'
+gem 'site_prism'
+gem 'selenium-cucumber'
+gem 'chromedriver-installer'
+gem 'chrome'
+gem 'headless'
+gem 'fastri'
+gem 'rcodetools'
+gem 'embed'
